@@ -2,6 +2,7 @@ import random
 from dado import dado
 import time
 
+# Function to handle user's decision on how many dice to roll
 def decisao_user():
     while True:
         quant_dados = input("\nVocê quer lançar 1 ou 2 dados? ")
@@ -37,7 +38,7 @@ def decisao_user():
             print("\nOpção inválida. Por favor, escolha 1 ou 2.")
             return 0
 
-
+#Function to the decision of the computer
 def computador_decisao():
     print("\nO computador está lançando os dados...")
     time.sleep(1)
@@ -54,7 +55,7 @@ def computador_decisao():
       
 
         
-    
+#start of the game
 print("\n\nBEM-VINDO AO DADO MALUCO!")
 time.sleep(1)
 print("\nVocê pode jogar 1 ou 2 dados.")
@@ -74,6 +75,7 @@ if decisao == 's':
     time.sleep(1)
     print("\nVamos começar!")
     
+    #loop for the game
     while pontos_usuario < 30 and pontos_computador < 30:
         rodada_usuario = decisao_user()
         pontos_usuario += rodada_usuario
