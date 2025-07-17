@@ -2,6 +2,9 @@ import random
 from dado import dado
 import time
 
+# Function to create a rainbow effect for the text
+# This function will color each letter of the text with a different color
+# to create a rainbow effect when printed in the terminal.
 def arco_iris(texto):
     cores = [
         '\033[31m', # vermelho
