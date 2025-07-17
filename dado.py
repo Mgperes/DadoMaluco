@@ -5,5 +5,6 @@ def dado():
     num = random.randint(1, 6)
 
     #imprime o resultado
-    print("O resultado do dado é: ")
+    print("O resultado do dado é: {}".format(num))
+    return num
 
