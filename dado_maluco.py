@@ -25,7 +25,7 @@ def arco_iris(texto):
 # Function to handle user's decision on how many dice to roll
 def decisao_user():
     while True:
-        quant_dados = input("\nVocê quer lançar 1 ou 2 dados? ")
+        quant_dados = input("\n\033[033mVocê quer lançar 1 ou 2 dados?\033[0m ")
         if quant_dados == '1':
             print("\n\033[0mVocê escolheu lançar 1 dado.")
             print("\nLançando o dado...")
@@ -40,7 +40,7 @@ def decisao_user():
                 print("\n\033[031mVocê perdeu os pontos dessa rodada, que pena!!\033[0m")
                 return 0
         elif quant_dados == '2':
-            print("\nVocê escolheu lançar 2 dados.")
+            print("\n\033[0mVocê escolheu lançar 2 dados.")
             print("\nLançando os dados...")
             time.sleep(1)
             dado1 = dado()
@@ -52,7 +52,7 @@ def decisao_user():
                 print(f"\n\033[032mVocê ganhou {resultado} pontos nesta rodada!\033[0m")
                 return resultado
             else:
-                print("\n\033[031mVocê perdeu os pontos dessa rodada\033[033m, que pena!!")
+                print("\n\033[031mVocê perdeu os pontos dessa rodada\033[033m, que pena!!\033[0m")
                 return 0
         else:
             print("\n\033[031mOpção inválida. Por favor, escolha 1 ou 2.\033[0m")
@@ -60,7 +60,7 @@ def decisao_user():
 
 #Function to the decision of the computer
 def computador_decisao():
-    print("\nO computador está lançando os dados...")
+    print("\n\033[0mO computador está lançando os dados...")
     time.sleep(1)
     dado1 = dado()
     time.sleep(1)
@@ -70,7 +70,7 @@ def computador_decisao():
         resultado = dado1 + dado2
         return resultado
     else:
-        print("\n\033[031mEu perdi os pontos dessa rodada :( \033[033m, vencerei você na próxima!!")
+        print("\n\033[031mEu perdi os pontos dessa rodada :( \033[033m, vencerei você na próxima!!\033[0m")
         return 0
       
 
